@@ -4,6 +4,7 @@ An interactive real-time camera edge detection app built with **React**, **OpenC
 
 
 ---
+## Screenshots
 ![image](https://github.com/user-attachments/assets/6d87adb3-9ed4-4109-8584-5c27c4f999ed)
 
 ![image](https://github.com/user-attachments/assets/892d3a22-0895-4429-962c-6c4bc34a5d4a)
@@ -72,19 +73,7 @@ yarn dev
   App.tsx
   main.tsx
 
-## Screenshots
 
-![image](https://github.com/user-attachments/assets/6d87adb3-9ed4-4109-8584-5c27c4f999ed)
-
-![image](https://github.com/user-attachments/assets/892d3a22-0895-4429-962c-6c4bc34a5d4a)
-
-![image](https://github.com/user-attachments/assets/706aaa93-c9b8-4e40-9ff8-7ed3ba6a80a5)
-
-![image](https://github.com/user-attachments/assets/c282e3d8-0ae9-44d9-8c3e-d41833cc2487)
-
-![image](https://github.com/user-attachments/assets/df358861-2f0b-481a-97d6-f994bfbaeede)
-
-![image](https://github.com/user-attachments/assets/f005b9e2-ffc6-43b1-b31f-f365a6de6fe2)
 
 ## Architecture & Frame Flow
 Camera → Canvas → OpenCV → Output Canvas
