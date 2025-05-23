@@ -90,3 +90,6 @@ OpenCV.js startup can take a few seconds (loading time shown)
 Frame rates depend on browser & hardware
 
 GPU acceleration for filters is not yet implemented
+
+
+![Image_Alt](https://github.com/javarishekhar/Real-Time-Edge-Detection-Viewer/blob/b8eaf64fb6117f3baf5e59c900186a802e2af250/Screenshot%202025-05-23%20093959.png)
