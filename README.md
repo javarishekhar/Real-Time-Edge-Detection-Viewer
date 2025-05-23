@@ -6,36 +6,36 @@ An interactive real-time camera edge detection app built with **React**, **OpenC
 
 ---
 
-## ✅ Features Implemented
+##  Features Implemented
 
-- 📷 **Live Camera Feed** using WebRTC (`getUserMedia`)
-- 🧠 **Real-Time Processing** via OpenCV.js:
+-  **Live Camera Feed** using WebRTC (`getUserMedia`)
+-  **Real-Time Processing** via OpenCV.js:
   - Raw Feed
   - Canny Edge Detection
   - Grayscale Conversion
   - Gaussian Blur
   - Binary Threshold
-- ⚙️ **Efficient Frame Loop** with `requestAnimationFrame`
-- 🎮 **User Interface** with:
+-  **Efficient Frame Loop** with `requestAnimationFrame`
+-  **User Interface** with:
   - Mode Toggle Buttons
   - Active State Indicators
   - FPS Counter (Color-coded)
-- ⚡ **Performance Optimization**:
+-  **Performance Optimization**:
   - Frame throttling
   - Memory leak prevention (`cv.Mat` management)
-- 🌐 **Responsive Design**: Mobile & Desktop friendly
-- 🧱 **TypeScript + Hooks + Modular Components**
+-  **Responsive Design**: Mobile & Desktop friendly
+-  **TypeScript + Hooks + Modular Components**
 
 ---
 
-## ⚙️ Setup Instructions
+## ⚙ Setup Instructions
 
-### 🧩 Prerequisites
+###  Prerequisites
 
 - Node.js ≥ 16
 - npm or yarn
 
-### 🧑‍💻 Clone the Repo
+### Clone the Repo
 
 ```bash
 git clone https://github.com/your-username/edge-detection-web.git
@@ -60,6 +60,12 @@ yarn dev
     └── opencvUtils.ts  # Image processing helpers
   App.tsx
   main.tsx
+
+## Screenshots
+
+
+![image](https://github.com/user-attachments/assets/68d4ccdd-425a-41f3-96bc-a0596c6d00b6)
+
 
 Architecture & Frame Flow
 Camera → Canvas → OpenCV → Output Canvas
