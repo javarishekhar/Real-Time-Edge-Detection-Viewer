@@ -2,7 +2,6 @@
 
 An interactive real-time camera edge detection app built with **React**, **OpenCV.js**, **WebGL**, and **WebRTC**. Designed to mimic native Android OpenCV+OpenGL edge detection pipelines in the browser using modern web technologies.
 
-![App Demo](./demo.gif)
 
 ---
 
@@ -49,6 +48,9 @@ yarn
 npm run dev
 # or
 yarn dev
+
+## Screenshots
+![image](https://github.com/user-attachments/assets/28c9c0fe-5312-4faf-b026-c8ed05f25843)
 
 
 /public
