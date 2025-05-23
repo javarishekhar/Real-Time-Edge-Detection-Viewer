@@ -16,7 +16,7 @@ export const EdgeDetectionCanvas: React.FC<EdgeDetectionCanvasProps> = ({ cv, pr
   // Function to process a single frame with OpenCV
   const processFrame = (video: HTMLVideoElement, canvas: HTMLCanvasElement) => {
     const context = canvas.getContext('2d');
-    if (!context) return;
+    if (!context || !cv) return;
     
     try {
       // Draw the current video frame to canvas
@@ -122,14 +122,16 @@ export const EdgeDetectionCanvas: React.FC<EdgeDetectionCanvasProps> = ({ cv, pr
 
   // Initialize animation loop
   useEffect(() => {
-    requestRef.current = requestAnimationFrame(animate);
-    
-    return () => {
-      if (requestRef.current) {
-        cancelAnimationFrame(requestRef.current);
-      }
-    };
-  }, [processingMode]);
+    if (cv) {
+      requestRef.current = requestAnimationFrame(animate);
+      
+      return () => {
+        if (requestRef.current) {
+          cancelAnimationFrame(requestRef.current);
+        }
+      };
+    }
+  }, [processingMode, cv]);
 
   return (
     <div className="relative w-full h-full">

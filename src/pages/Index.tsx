@@ -1,14 +1,14 @@
 
-import React, { useRef, useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Button } from "@/components/ui/button";
 import { toast } from "@/hooks/use-toast";
-import { useCV } from "opencv-react";
 import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle } from "@/components/ui/dialog";
 import { FpsCounter } from "@/components/FpsCounter";
 import { EdgeDetectionCanvas } from "@/components/EdgeDetectionCanvas";
+import { useOpenCV } from "@/hooks/useOpenCV";
 
 const Index = () => {
-  const { loaded: cvLoaded, cv } = useCV();
+  const { loaded: cvLoaded, cv } = useOpenCV();
   const [cameraActive, setCameraActive] = useState(false);
   const [processingMode, setProcessingMode] = useState<'raw' | 'edges' | 'grayscale' | 'blur' | 'threshold'>('edges');
   const [openPermissionDialog, setOpenPermissionDialog] = useState(false);
