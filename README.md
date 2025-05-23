@@ -6,6 +6,9 @@ An interactive real-time camera edge detection app built with **React**, **OpenC
 ---
 ![image](https://github.com/user-attachments/assets/6d87adb3-9ed4-4109-8584-5c27c4f999ed)
 
+![image](https://github.com/user-attachments/assets/892d3a22-0895-4429-962c-6c4bc34a5d4a)
+
+
 
 ##  Features Implemented
 
