@@ -2,7 +2,7 @@
 
 An interactive real-time camera edge detection app built with **React**, **OpenCV.js**, **WebGL**, and **WebRTC**. Designed to mimic native Android OpenCV+OpenGL edge detection pipelines in the browser using modern web technologies.
 
-
+Demo Link : https://edge-vision-android-craft.lovable.app/
 ---
 ## Screenshots
 ## Main Frame
@@ -41,5 +41,5 @@ An interactive real-time camera edge detection app built with **React**, **OpenC
 
 ---
 
-Demo Link : https://edge-vision-android-craft.lovable.app/
+
 
