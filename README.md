@@ -12,6 +12,9 @@ An interactive real-time camera edge detection app built with **React**, **OpenC
 
 ![image](https://github.com/user-attachments/assets/c282e3d8-0ae9-44d9-8c3e-d41833cc2487)
 
+![image](https://github.com/user-attachments/assets/df358861-2f0b-481a-97d6-f994bfbaeede)
+
+
 ##  Features Implemented
 
 -  **Live Camera Feed** using WebRTC (`getUserMedia`)
