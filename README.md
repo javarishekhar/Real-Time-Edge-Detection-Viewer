@@ -1,73 +1,84 @@
-# Welcome to your Lovable project
+# 🔍 Web-Based Real-Time Edge Detection Viewer
 
-## Project info
+An interactive real-time camera edge detection app built with **React**, **OpenCV.js**, **WebGL**, and **WebRTC**. Designed to mimic native Android OpenCV+OpenGL edge detection pipelines in the browser using modern web technologies.
 
-**URL**: https://lovable.dev/projects/a8e2c51f-8426-45cc-b742-5c9028ceeefd
+![App Demo](./demo.gif)
 
-## How can I edit this code?
+---
 
-There are several ways of editing your application.
+## ✅ Features Implemented
 
-**Use Lovable**
+- 📷 **Live Camera Feed** using WebRTC (`getUserMedia`)
+- 🧠 **Real-Time Processing** via OpenCV.js:
+  - Raw Feed
+  - Canny Edge Detection
+  - Grayscale Conversion
+  - Gaussian Blur
+  - Binary Threshold
+- ⚙️ **Efficient Frame Loop** with `requestAnimationFrame`
+- 🎮 **User Interface** with:
+  - Mode Toggle Buttons
+  - Active State Indicators
+  - FPS Counter (Color-coded)
+- ⚡ **Performance Optimization**:
+  - Frame throttling
+  - Memory leak prevention (`cv.Mat` management)
+- 🌐 **Responsive Design**: Mobile & Desktop friendly
+- 🧱 **TypeScript + Hooks + Modular Components**
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/a8e2c51f-8426-45cc-b742-5c9028ceeefd) and start prompting.
+---
 
-Changes made via Lovable will be committed automatically to this repo.
+## ⚙️ Setup Instructions
 
-**Use your preferred IDE**
+### 🧩 Prerequisites
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+- Node.js ≥ 16
+- npm or yarn
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+### 🧑‍💻 Clone the Repo
 
-Follow these steps:
+```bash
+git clone https://github.com/your-username/edge-detection-web.git
+cd edge-detection-web
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+npm install
+# or
+yarn
 
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
 npm run dev
-```
+# or
+yarn dev
 
-**Edit a file directly in GitHub**
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+/public
+  └── opencv.js         # OpenCV.js runtime
+/src
+  /components
+    └── CameraProcessor.tsx
+  /utils
+    └── opencvUtils.ts  # Image processing helpers
+  App.tsx
+  main.tsx
 
-**Use GitHub Codespaces**
+Architecture & Frame Flow
+Camera → Canvas → OpenCV → Output Canvas
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+getUserMedia() streams camera feed into a <video> element.
 
-## What technologies are used for this project?
+Video frames are drawn to a hidden canvas.
 
-This project is built with:
+Each frame is converted into a cv.Mat in OpenCV.js.
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+Filters (Canny, grayscale, etc.) are applied per user selection.
 
-## How can I deploy this project?
+Output frame is drawn to a visible <canvas> with optional WebGL shaders.
 
-Simply open [Lovable](https://lovable.dev/projects/a8e2c51f-8426-45cc-b742-5c9028ceeefd) and click on Share -> Publish.
+All operations are throttled and cleaned up efficiently to maintain performance.
 
-## Can I connect a custom domain to my Lovable project?
+Known Limitations
+OpenCV.js startup can take a few seconds (loading time shown)
 
-Yes, you can!
+Frame rates depend on browser & hardware
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+GPU acceleration for filters is not yet implemented
