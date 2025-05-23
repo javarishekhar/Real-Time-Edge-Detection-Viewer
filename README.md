@@ -14,6 +14,8 @@ An interactive real-time camera edge detection app built with **React**, **OpenC
 
 ![image](https://github.com/user-attachments/assets/df358861-2f0b-481a-97d6-f994bfbaeede)
 
+![image](https://github.com/user-attachments/assets/f005b9e2-ffc6-43b1-b31f-f365a6de6fe2)
+
 
 ##  Features Implemented
 
@@ -37,7 +39,7 @@ An interactive real-time camera edge detection app built with **React**, **OpenC
 
 ---
 
-## ⚙ Setup Instructions
+##  Setup Instructions
 
 ###  Prerequisites
 
@@ -59,10 +61,7 @@ npm run dev
 # or
 yarn dev
 
-## Screenshots
-![image](https://github.com/user-attachments/assets/28c9c0fe-5312-4faf-b026-c8ed05f25843)
-
-
+## Project Structure
 /public
   └── opencv.js         # OpenCV.js runtime
 /src
@@ -75,11 +74,19 @@ yarn dev
 
 ## Screenshots
 
+![image](https://github.com/user-attachments/assets/6d87adb3-9ed4-4109-8584-5c27c4f999ed)
 
-![image](https://github.com/user-attachments/assets/68d4ccdd-425a-41f3-96bc-a0596c6d00b6)
+![image](https://github.com/user-attachments/assets/892d3a22-0895-4429-962c-6c4bc34a5d4a)
 
+![image](https://github.com/user-attachments/assets/706aaa93-c9b8-4e40-9ff8-7ed3ba6a80a5)
 
-Architecture & Frame Flow
+![image](https://github.com/user-attachments/assets/c282e3d8-0ae9-44d9-8c3e-d41833cc2487)
+
+![image](https://github.com/user-attachments/assets/df358861-2f0b-481a-97d6-f994bfbaeede)
+
+![image](https://github.com/user-attachments/assets/f005b9e2-ffc6-43b1-b31f-f365a6de6fe2)
+
+## Architecture & Frame Flow
 Camera → Canvas → OpenCV → Output Canvas
 
 getUserMedia() streams camera feed into a <video> element.
@@ -101,5 +108,3 @@ Frame rates depend on browser & hardware
 
 GPU acceleration for filters is not yet implemented
 
-
-![Image_Alt](https://github.com/javarishekhar/Real-Time-Edge-Detection-Viewer/blob/b8eaf64fb6117f3baf5e59c900186a802e2af250/Screenshot%202025-05-23%20093959.png)
